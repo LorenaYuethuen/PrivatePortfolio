@@ -1,0 +1,210 @@
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --font-size: 16px;
+  
+  /* Portfolio Design System Colors */
+  --bg-primary: #0C0C0E;
+  --bg-secondary: #121214;
+  --card-dark: #16171A;
+  --border-light: #FFFFFF14;
+  --text-primary: #FFFFFFE6;
+  --text-secondary: #FFFFFF99;
+  --neon-blue: #00C7FF;
+  --accent-gold: #BFA36F;
+  
+  /* Tailwind compatibility */
+  --background: var(--bg-primary);
+  --foreground: var(--text-primary);
+  --card: var(--card-dark);
+  --card-foreground: var(--text-primary);
+  --popover: var(--card-dark);
+  --popover-foreground: var(--text-primary);
+  --primary: var(--neon-blue);
+  --primary-foreground: #000000;
+  --secondary: var(--bg-secondary);
+  --secondary-foreground: var(--text-primary);
+  --muted: var(--bg-secondary);
+  --muted-foreground: var(--text-secondary);
+  --accent: var(--accent-gold);
+  --accent-foreground: #000000;
+  --destructive: #d4183d;
+  --destructive-foreground: #ffffff;
+  --border: var(--border-light);
+  --input: transparent;
+  --input-background: var(--card-dark);
+  --switch-background: #cbced4;
+  --font-weight-medium: 600;
+  --font-weight-normal: 400;
+  --ring: var(--neon-blue);
+  --chart-1: var(--neon-blue);
+  --chart-2: var(--accent-gold);
+  --chart-3: #00FF88;
+  --chart-4: #FF006E;
+  --chart-5: #8B5CF6;
+  --radius: 0.75rem;
+  --sidebar: var(--bg-secondary);
+  --sidebar-foreground: var(--text-primary);
+  --sidebar-primary: var(--neon-blue);
+  --sidebar-primary-foreground: #000000;
+  --sidebar-accent: var(--card-dark);
+  --sidebar-accent-foreground: var(--text-primary);
+  --sidebar-border: var(--border-light);
+  --sidebar-ring: var(--neon-blue);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-input-background: var(--input-background);
+  --color-switch-background: var(--switch-background);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+  
+  /* Custom portfolio colors */
+  --color-bg-primary: var(--bg-primary);
+  --color-bg-secondary: var(--bg-secondary);
+  --color-card-dark: var(--card-dark);
+  --color-border-light: var(--border-light);
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-neon-blue: var(--neon-blue);
+  --color-accent-gold: var(--accent-gold);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-[var(--bg-primary)] text-[var(--text-primary)];
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+}
+
+/**
+ * Base typography for portfolio
+ */
+@layer base {
+  :where(:not(:has([class*=' text-']), :not(:has([class^='text-'])))) {
+    h1 {
+      font-size: 96px;
+      font-weight: 800;
+      line-height: 110%;
+      letter-spacing: -0.02em;
+    }
+
+    h2 {
+      font-size: 48px;
+      font-weight: 700;
+      line-height: 120%;
+      letter-spacing: -0.01em;
+    }
+
+    h3 {
+      font-size: 32px;
+      font-weight: 600;
+      line-height: 130%;
+    }
+
+    h4 {
+      font-size: 24px;
+      font-weight: 600;
+      line-height: 130%;
+    }
+
+    p {
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 150%;
+    }
+
+    label {
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 140%;
+    }
+
+    button {
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 1.5;
+    }
+
+    input {
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 1.5;
+    }
+  }
+}
+
+html {
+  font-size: var(--font-size);
+  scroll-behavior: smooth;
+}
+
+/* Custom Glow Effects */
+.glow-neon-blue {
+  box-shadow: 0 0 32px rgba(0, 199, 255, 0.2);
+}
+
+.glow-neon-blue-strong {
+  box-shadow: 0 0 48px rgba(0, 199, 255, 0.4);
+}
+
+.card-shadow {
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.56), 0 -4px 0 rgba(0, 0, 0, 0.1);
+}
+
+/* Noise overlay */
+.noise-overlay::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.02'/%3E%3C/svg%3E");
+  pointer-events: none;
+  opacity: 0.4;
+  mix-blend-mode: overlay;
+}
+
+/* Gradient backgrounds */
+.gradient-radial {
+  background: radial-gradient(circle at center, var(--bg-secondary) 0%, var(--bg-primary) 100%);
+}
