@@ -4,6 +4,8 @@ import { HomePage } from './pages/HomePage';
 import { ProjectsPage } from './pages/ProjectsPage';
 import { CaseStudyPage } from './pages/CaseStudyPage';
 import { AboutPage } from './pages/AboutPage';
+import { LifeSystemPage } from './pages/LifeSystemPage';
+import { ItemsPage } from './pages/ItemsPage';
 
 export default function App() {
   return (
@@ -15,6 +17,8 @@ export default function App() {
           <Route path="/projects" element={<ProjectsPage />} />
           <Route path="/project/:id" element={<CaseStudyPage />} />
           <Route path="/about" element={<AboutPage />} />
+          <Route path="/life-system" element={<LifeSystemPage />} />
+          <Route path="/items" element={<ItemsPage />} />
         </Routes>
         
         {/* Footer */}
@@ -23,9 +27,9 @@ export default function App() {
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-2">
                 <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-[var(--neon-blue)] to-[var(--accent-gold)] flex items-center justify-center">
-                  <span className="text-black">P</span>
+                  <span className="text-black">L</span>
                 </div>
-                <span className="text-[var(--text-primary)]">Portfolio</span>
+                <span className="text-[var(--text-primary)]">LifeSystem</span>
               </div>
               
               <div className="text-[var(--text-secondary)] text-sm">

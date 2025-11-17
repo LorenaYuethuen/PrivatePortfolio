@@ -12,9 +12,9 @@ export function Navigation() {
       <div className="max-w-[1440px] mx-auto px-12 py-6 flex items-center justify-between">
         <Link to="/" className="flex items-center gap-2">
           <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-[var(--neon-blue)] to-[var(--accent-gold)] flex items-center justify-center">
-            <span className="text-black">P</span>
+            <span className="text-black">L</span>
           </div>
-          <span className="text-[var(--text-primary)]">Portfolio</span>
+          <span className="text-[var(--text-primary)]">LifeSystem</span>
         </Link>
         
         <div className="flex items-center gap-8">
@@ -25,6 +25,22 @@ export function Navigation() {
             }`}
           >
             Home
+          </Link>
+          <Link 
+            to="/life-system" 
+            className={`transition-colors hover:text-[var(--neon-blue)] ${
+              isActive('/life-system') ? 'text-[var(--neon-blue)]' : 'text-[var(--text-secondary)]'
+            }`}
+          >
+            生活系统
+          </Link>
+          <Link 
+            to="/items" 
+            className={`transition-colors hover:text-[var(--neon-blue)] ${
+              isActive('/items') ? 'text-[var(--neon-blue)]' : 'text-[var(--text-secondary)]'
+            }`}
+          >
+            物品管理
           </Link>
           <Link 
             to="/projects" 
@@ -42,12 +58,6 @@ export function Navigation() {
           >
             About
           </Link>
-          <a 
-            href="#contact" 
-            className="px-8 py-3 rounded-xl bg-[var(--neon-blue)] text-black hover:shadow-[0_0_32px_rgba(0,199,255,0.4)] transition-all"
-          >
-            Contact
-          </a>
         </div>
       </div>
     </nav>

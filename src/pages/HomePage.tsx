@@ -1,31 +1,6 @@
-import { ArrowRight, Sparkles, Users, Award } from 'lucide-react';
+import { ArrowRight, Sparkles, Users, Dumbbell, Home } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { GlowLine } from '../components/GlowLine';
-import { ProjectCard } from '../components/ProjectCard';
-
-const featuredProjects = [
-  {
-    id: 'ai-dashboard',
-    title: 'AI Analytics Dashboard',
-    description: 'Real-time data visualization platform with predictive analytics and custom reporting',
-    tags: ['UI/UX', 'Dashboard', 'AI'],
-    image: 'https://images.unsplash.com/photo-1758411898021-ef0dadaaa295?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBkYXNoYm9hcmQlMjBpbnRlcmZhY2V8ZW58MXx8fHwxNzYzMDUzMDk5fDA&ixlib=rb-4.1.0&q=80&w=1080',
-  },
-  {
-    id: 'mobile-banking',
-    title: 'Mobile Banking App',
-    description: 'Intuitive financial management with smart budgeting and seamless transactions',
-    tags: ['Mobile', 'Fintech', 'Design System'],
-    image: 'https://images.unsplash.com/photo-1609921212029-bb5a28e60960?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2JpbGUlMjBhcHAlMjBkZXNpZ258ZW58MXx8fHwxNzYyOTgzOTAzfDA&ixlib=rb-4.1.0&q=80&w=1080',
-  },
-  {
-    id: 'saas-platform',
-    title: 'SaaS Platform Redesign',
-    description: 'Complete redesign of enterprise software with focus on user experience',
-    tags: ['Web', 'SaaS', 'Redesign'],
-    image: 'https://images.unsplash.com/photo-1707836868495-3307d371aba4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3ZWJzaXRlJTIwZGVzaWduJTIwbW9ja3VwfGVufDF8fHx8MTc2MzA2MjY4NHww&ixlib=rb-4.1.0&q=80&w=1080',
-  },
-];
 
 export function HomePage() {
   return (
@@ -43,32 +18,32 @@ export function HomePage() {
           </div>
           
           <h1 className="text-[var(--text-primary)]">
-            Crafting Digital
+            阿卡西记录
             <br />
             <span className="bg-gradient-to-r from-[var(--neon-blue)] to-[var(--accent-gold)] bg-clip-text text-transparent">
-              Experiences
+              生活系统矩阵
             </span>
           </h1>
           
           <p className="text-2xl text-[var(--text-secondary)] max-w-2xl">
-            Product designer specializing in user-centered design for web and mobile applications
+            从"驾驶员"向"总设计师"的进阶，构建能容纳所有雄心壮志的系统矩阵
           </p>
           
           <div className="flex items-center gap-6 mt-4">
             <Link 
-              to="/projects"
+              to="/life-system"
               className="group flex items-center gap-2 px-8 py-4 rounded-xl bg-[var(--neon-blue)] text-black hover:shadow-[0_0_48px_rgba(0,199,255,0.4)] transition-all"
             >
-              View Projects
+              探索生活系统
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Link>
             
-            <a 
-              href="#contact"
+            <Link 
+              to="/about"
               className="px-8 py-4 rounded-xl bg-[#1A1A1A] border border-[var(--border-light)] text-[var(--text-primary)] hover:border-[var(--neon-blue)] hover:shadow-[0_0_24px_rgba(0,199,255,0.2)] transition-all"
             >
-              Get in Touch
-            </a>
+              了解更多
+            </Link>
           </div>
           
           <GlowLine width="120px" className="mt-8" />
@@ -81,20 +56,17 @@ export function HomePage() {
           {/* Left Text */}
           <div className="flex-1 flex flex-col gap-6">
             <h2 className="text-[var(--text-primary)]">
-              Design that drives
+              整合身体层、心智层
               <br />
-              business results
+              和知识层的系统矩阵
             </h2>
             <p className="text-[var(--text-secondary)]">
-              With over 5 years of experience in product design, I specialize in creating 
-              intuitive and visually stunning digital products. My approach combines strategic 
-              thinking with meticulous attention to detail, ensuring every design decision 
-              serves both user needs and business goals.
+              通过精细化的时间管理（15*4时间片）、分层投入的资金策略（生存层→基石层→成长层→体验层），
+              以及三维度的精力管理（体能/脑力/社交），构建一个能够自我产生能量、创造价值的生活系统。
             </p>
             <p className="text-[var(--text-secondary)]">
-              I've worked with startups and established companies across fintech, healthcare, 
-              and SaaS industries, delivering designs that not only look great but also 
-              significantly improve user engagement and conversion rates.
+              核心公式：精力 × (时间/爱好) × 金钱 = 体验。最终目标是通过可再生的精力、
+              自由支配的时间，以及通过爱好产生的金钱，去购买和创造极致的体验，实现"体验宇宙"的终极目的。
             </p>
           </div>
           
@@ -104,12 +76,12 @@ export function HomePage() {
               <div className="flex flex-col gap-8">
                 <div className="flex items-start gap-4">
                   <div className="w-12 h-12 rounded-xl bg-[var(--neon-blue)]/10 flex items-center justify-center">
-                    <Award className="w-6 h-6 text-[var(--neon-blue)]" />
+                    <Sparkles className="w-6 h-6 text-[var(--neon-blue)]" />
                   </div>
                   <div>
-                    <h4 className="text-[var(--text-primary)] mb-2">Excellence in Design</h4>
+                    <h4 className="text-[var(--text-primary)] mb-2">身体仪器维护</h4>
                     <p className="text-[var(--text-secondary)] text-base">
-                      Multiple awards and recognition for outstanding digital experiences
+                      通过运动习惯、饮食习惯、作息routine和爱服美役，维持精妙仪器的高效运作
                     </p>
                   </div>
                 </div>
@@ -119,25 +91,25 @@ export function HomePage() {
                     <Users className="w-6 h-6 text-[var(--accent-gold)]" />
                   </div>
                   <div>
-                    <h4 className="text-[var(--text-primary)] mb-2">User-Centered Approach</h4>
+                    <h4 className="text-[var(--text-primary)] mb-2">心智体验创造</h4>
                     <p className="text-[var(--text-secondary)] text-base">
-                      Deep research and testing to ensure designs meet real user needs
+                      通过听觉、视觉、书写/阅读和嗅觉系统，构建知识体系，进入心流状态
                     </p>
                   </div>
                 </div>
                 
                 <div className="grid grid-cols-3 gap-6 pt-6 border-t border-[var(--border-light)]">
                   <div>
-                    <div className="text-4xl mb-1 bg-gradient-to-r from-[var(--neon-blue)] to-[var(--accent-gold)] bg-clip-text text-transparent">50+</div>
-                    <div className="text-sm text-[var(--text-secondary)]">Projects</div>
+                    <div className="text-4xl mb-1 bg-gradient-to-r from-[var(--neon-blue)] to-[var(--accent-gold)] bg-clip-text text-transparent">15×4</div>
+                    <div className="text-sm text-[var(--text-secondary)]">时间片</div>
                   </div>
                   <div>
-                    <div className="text-4xl mb-1 bg-gradient-to-r from-[var(--neon-blue)] to-[var(--accent-gold)] bg-clip-text text-transparent">30+</div>
-                    <div className="text-sm text-[var(--text-secondary)]">Clients</div>
+                    <div className="text-4xl mb-1 bg-gradient-to-r from-[var(--neon-blue)] to-[var(--accent-gold)] bg-clip-text text-transparent">3层</div>
+                    <div className="text-sm text-[var(--text-secondary)]">收入来源</div>
                   </div>
                   <div>
-                    <div className="text-4xl mb-1 bg-gradient-to-r from-[var(--neon-blue)] to-[var(--accent-gold)] bg-clip-text text-transparent">5</div>
-                    <div className="text-sm text-[var(--text-secondary)]">Awards</div>
+                    <div className="text-4xl mb-1 bg-gradient-to-r from-[var(--neon-blue)] to-[var(--accent-gold)] bg-clip-text text-transparent">P/M/S</div>
+                    <div className="text-sm text-[var(--text-secondary)]">精力维度</div>
                   </div>
                 </div>
               </div>
@@ -146,26 +118,61 @@ export function HomePage() {
         </div>
       </section>
 
-      {/* Featured Projects Section */}
+      {/* Core Systems Section */}
       <section className="max-w-[1440px] mx-auto px-[120px] pb-[120px]">
         <div className="flex flex-col gap-12">
           <div className="text-center">
-            <h2 className="text-[var(--text-primary)] mb-4">Featured Projects</h2>
+            <h2 className="text-[var(--text-primary)] mb-4">核心系统模块</h2>
             <GlowLine width="120px" className="mx-auto" />
           </div>
           
           <div className="grid grid-cols-3 gap-8">
-            {featuredProjects.map((project) => (
-              <ProjectCard key={project.id} {...project} />
-            ))}
+            <div className="bg-[var(--card-dark)] border border-[var(--border-light)] rounded-2xl p-8 hover:border-[var(--neon-blue)] transition-colors">
+              <Dumbbell className="w-12 h-12 text-[var(--neon-blue)] mb-4" />
+              <h3 className="text-[var(--text-primary)] mb-3">身体仪器</h3>
+              <p className="text-[var(--text-secondary)] mb-4">
+                运动习惯、饮食习惯、作息routine和爱服美役，维持精妙仪器的高效运作
+              </p>
+              <ul className="text-sm text-[var(--text-secondary)] space-y-2">
+                <li>• 力量训练、攀岩、游泳</li>
+                <li>• 营养学应用</li>
+                <li>• 作息与大脑训练</li>
+              </ul>
+            </div>
+            
+            <div className="bg-[var(--card-dark)] border border-[var(--border-light)] rounded-2xl p-8 hover:border-[var(--neon-blue)] transition-colors">
+              <Sparkles className="w-12 h-12 text-[var(--accent-gold)] mb-4" />
+              <h3 className="text-[var(--text-primary)] mb-3">心智体验</h3>
+              <p className="text-[var(--text-secondary)] mb-4">
+                通过听觉、视觉、书写/阅读和嗅觉系统，构建知识体系，进入心流状态
+              </p>
+              <ul className="text-sm text-[var(--text-secondary)] space-y-2">
+                <li>• 音乐欣赏与乐器</li>
+                <li>• 摄影与观影</li>
+                <li>• 阅读与创作</li>
+              </ul>
+            </div>
+            
+            <div className="bg-[var(--card-dark)] border border-[var(--border-light)] rounded-2xl p-8 hover:border-[var(--neon-blue)] transition-colors">
+              <Home className="w-12 h-12 text-[var(--neon-blue)] mb-4" />
+              <h3 className="text-[var(--text-primary)] mb-3">居住环境</h3>
+              <p className="text-[var(--text-secondary)] mb-4">
+                WABI-SABI风格的庇护所，分阶段实现理想的生活居住环境
+              </p>
+              <ul className="text-sm text-[var(--text-secondary)] space-y-2">
+                <li>• 音乐区、读书角</li>
+                <li>• 高品质卧室</li>
+                <li>• 居家运动区</li>
+              </ul>
+            </div>
           </div>
           
           <div className="text-center">
             <Link 
-              to="/projects"
+              to="/life-system"
               className="inline-flex items-center gap-2 px-8 py-4 rounded-xl border border-[var(--border-light)] text-[var(--text-primary)] hover:border-[var(--neon-blue)] hover:shadow-[0_0_24px_rgba(0,199,255,0.2)] transition-all"
             >
-              View All Projects
+              查看完整系统矩阵
               <ArrowRight className="w-5 h-5" />
             </Link>
           </div>
@@ -179,17 +186,18 @@ export function HomePage() {
           <div className="absolute bottom-0 left-0 w-64 h-64 bg-[var(--accent-gold)] opacity-5 blur-[80px] rounded-full" />
           
           <div className="relative z-10">
-            <h2 className="text-[var(--text-primary)] mb-6">Let's work together</h2>
+            <h2 className="text-[var(--text-primary)] mb-6">开始构建你的生活系统</h2>
             <p className="text-xl text-[var(--text-secondary)] mb-8 max-w-2xl mx-auto">
-              Have a project in mind? Let's discuss how we can create something amazing together.
+              通过精细化的资源管理和系统化的习惯建立，实现从"驾驶员"向"总设计师"的进阶，
+              构建能容纳所有雄心壮志的系统矩阵。
             </p>
-            <a 
-              href="mailto:hello@portfolio.com"
+            <Link 
+              to="/life-system"
               className="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-[var(--neon-blue)] text-black hover:shadow-[0_0_48px_rgba(0,199,255,0.4)] transition-all"
             >
-              Start a Conversation
+              探索完整系统
               <ArrowRight className="w-5 h-5" />
-            </a>
+            </Link>
           </div>
         </div>
       </section>
